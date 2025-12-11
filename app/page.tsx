@@ -26,7 +26,7 @@ function App() {
           className="py-24 max-w-7xl mx-auto px-6 scroll-mt-32"
         >
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 border-b border-gray-800 pb-6">
-            <div>
+            <div className="mb-12 border-l-2 border-white pl-6">
               <h2 className="text-3xl font-sans font-light tracking-tight text-white mb-2">
                 Selected Works
               </h2>
@@ -97,7 +97,7 @@ function App() {
                   <a
                     href="/resume.pdf"
                     target="_blank"
-                    className="inline-flex items-center gap-2 text-white border border-gray-700 px-5 py-2.5 hover:bg-white/10 transition-colors font-mono text-xs uppercase tracking-widest"
+                    className="inline-flex rounded-md items-center gap-2 text-white border border-gray-700 px-5 py-2.5 hover:bg-white/10 transition-colors font-mono text-xs uppercase tracking-widest"
                   >
                     <Download size={14} />
                     Download Resume

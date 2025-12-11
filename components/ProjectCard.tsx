@@ -9,7 +9,7 @@ interface ProjectCardProps {
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
-    <div className="group relative border border-palantir-gray bg-palantir-dark hover:border-white/40 hover:-translate-y-1 transition-all duration-300 flex flex-col h-full overflow-hidden">
+    <div className="group relative rounded-md border border-palantir-gray bg-palantir-dark hover:border-white/40 hover:-translate-y-1 transition-all duration-300 flex flex-col h-full overflow-hidden">
       {/* Decorative Grid Background */}
       <div className="absolute inset-0 bg-grid-pattern opacity-[0.03] pointer-events-none"></div>
 
@@ -68,7 +68,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             {project.techStack.map((tech) => (
               <span
                 key={tech}
-                className="text-[10px] font-mono text-gray-500 border border-gray-800 px-1.5 py-0.5"
+                className="text-[10px] rounded-sm font-mono text-gray-500 border border-gray-800 px-1.5 py-0.5"
               >
                 {tech}
               </span>

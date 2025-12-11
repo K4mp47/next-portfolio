@@ -65,7 +65,7 @@ export const SkillMatrix: React.FC = () => {
   return (
     <div
       id="skills"
-      className="w-full bg-palantir-black py-24 relative scroll-mt-32"
+      className="w-full bg-linear-to-b to-palantir-black py-24 relative scroll-mt-32"
     >
       <div className="max-w-7xl mx-auto px-6">
         <div className="mb-12 border-l-2 border-white pl-6">
@@ -80,7 +80,7 @@ export const SkillMatrix: React.FC = () => {
           <div className="p-2 bg-blue-500/10 border border-blue-500/20 rounded-lg mt-1 shrink-0">
             <BugPlay size={24} className="text-blue-400" />
           </div>
-          <div> 
+          <div>
             <h3 className="text-lg font-mono font-light text-blue-400 mb-1">
               Active Research
             </h3>
@@ -92,7 +92,7 @@ export const SkillMatrix: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-24">
           {/* Chart 1: Radar - Hollistic View */}
-          <div className="border border-palantir-gray bg-palantir-dark/30 p-8 h-[400px] flex flex-col">
+          <div className="border rounded-md border-palantir-gray bg-palantir-dark/30 p-8 h-[400px] flex flex-col">
             <h3 className="text-xs font-mono uppercase tracking-widest text-gray-500 mb-6 flex justify-between shrink-0">
               <span>Core Competencies</span>
               <span>FIG 1.0</span>
@@ -133,7 +133,7 @@ export const SkillMatrix: React.FC = () => {
           </div>
 
           {/* Chart 2: Donut - Codebase Composition */}
-          <div className="border border-palantir-gray bg-palantir-dark/30 p-8 h-[400px] flex flex-col">
+          <div className="border rounded-md border-palantir-gray bg-palantir-dark/30 p-8 h-[400px] flex flex-col">
             <h3 className="text-xs font-mono uppercase tracking-widest text-gray-500 mb-6 flex justify-between shrink-0">
               <span>Codebase Composition</span>
               <span>FIG 2.0</span>

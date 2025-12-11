@@ -60,7 +60,7 @@ export const Terminal: React.FC = () => {
   };
 
   return (
-    <div className="w-full max-w-4xl mx-auto my-24 border border-palantir-gray bg-palantir-dark/50 backdrop-blur relative overflow-hidden group">
+    <div className="w-full rounded-md max-w-4xl mx-auto my-24 border border-palantir-gray bg-palantir-dark/50 backdrop-blur relative overflow-hidden group">
       {/* Decorative Header */}
       <div className="h-10 border-b border-palantir-gray flex items-center px-4 bg-palantir-gray/10 justify-between">
         <div className="flex items-center gap-2">
@@ -85,9 +85,9 @@ export const Terminal: React.FC = () => {
               }`}
           >
             <div
-              className={`max-w-[80%] p-4 border ${msg.role === "user"
-                  ? "bg-palantir-gray/30 border-gray-600 text-gray-200"
-                  : "bg-blue-950/20 border-blue-900/50 text-blue-100"
+              className={`max-w-[80%] p-4 border rounded-md ${msg.role === "user"
+                ? "bg-palantir-gray/30 border-gray-600 text-gray-200"
+                : "bg-blue-950/20 border-blue-900/50 text-blue-100"
                 }`}
             >
               <div className="text-[10px] text-gray-500 mb-1 uppercase tracking-wider opacity-70">

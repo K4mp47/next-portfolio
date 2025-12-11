@@ -21,19 +21,6 @@ export const ContactForm: React.FC = () => {
     }
   }, [state.succeeded, state.submitting]);
 
-  // const handleSubmit = (e: React.FormEvent) => {
-  //   e.preventDefault();
-  //   setStatus("loading");
-  //
-  //   setTimeout(() => {
-  //     setStatus("success");
-  //     setFormData({ name: "", email: "", message: "" });
-  //
-  //     // Reset status after a delay
-  //     // setTimeout(() => setStatus("idle"), 5000);
-  //   }, 1200);
-  // };
-
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
@@ -69,7 +56,7 @@ export const ContactForm: React.FC = () => {
               required
               value={formData.name}
               onChange={handleChange}
-              className="w-full bg-palantir-dark/50 border border-gray-800 focus:border-blue-500 text-gray-200 text-sm p-3 outline-none transition-all placeholder-gray-700"
+              className="w-full rounded-md bg-palantir-dark/50 border border-gray-800 focus:border-blue-500 text-gray-200 text-sm p-3 outline-none transition-all placeholder-gray-700"
               placeholder="Jane Doe"
             />
           </div>
@@ -87,7 +74,7 @@ export const ContactForm: React.FC = () => {
               required
               value={formData.email}
               onChange={handleChange}
-              className="w-full bg-palantir-dark/50 border border-gray-800 focus:border-blue-500 text-gray-200 text-sm p-3 outline-none transition-all placeholder-gray-700"
+              className="w-full rounded-md bg-palantir-dark/50 border border-gray-800 focus:border-blue-500 text-gray-200 text-sm p-3 outline-none transition-all placeholder-gray-700"
               placeholder="jane@corp.com"
             />
           </div>
@@ -107,7 +94,7 @@ export const ContactForm: React.FC = () => {
             rows={4}
             value={formData.message}
             onChange={handleChange}
-            className="w-full bg-palantir-dark/50 border border-gray-800 focus:border-blue-500 text-gray-200 text-sm p-3 outline-none transition-all resize-none placeholder-gray-700"
+            className="w-full rounded-md bg-palantir-dark/50 border border-gray-800 focus:border-blue-500 text-gray-200 text-sm p-3 outline-none transition-all resize-none placeholder-gray-700"
             placeholder="Project details, inquiries, or collaboration opportunities..."
           />
         </div>
@@ -115,11 +102,10 @@ export const ContactForm: React.FC = () => {
         <button
           type="submit"
           disabled={status === "loading"}
-          className={`w-full sm:w-auto min-w-40 flex items-center justify-center gap-3 py-3 px-6 font-mono text-xs uppercase tracking-widest transition-all duration-300 ${
-            status === "success"
-              ? "bg-emerald-900/20 text-emerald-400 border border-emerald-900/50"
-              : "bg-white text-black hover:bg-gray-200 border border-white"
-          }`}
+          className={`w-full rounded-md sm:w-auto min-w-40 flex items-center justify-center gap-3 py-3 px-6 font-mono text-xs uppercase tracking-widest transition-all duration-300 ${status === "success"
+            ? "bg-emerald-900/20 text-emerald-400 border border-emerald-900/50"
+            : "bg-white text-black hover:bg-gray-200 border border-white"
+            }`}
         >
           {status === "loading"
             ? (
@@ -129,19 +115,19 @@ export const ContactForm: React.FC = () => {
               </>
             )
             : status === "success"
-            ? (
-              <>
-                <CheckCircle size={14} />
-                <span>Sent</span>
-              </>
-            )
-            : (
-              <>
-                <span>Send Message</span>
-                <Send size={14} />
-              </>
-            )}
-   
+              ? (
+                <>
+                  <CheckCircle size={14} />
+                  <span>Sent</span>
+                </>
+              )
+              : (
+                <>
+                  <span>Send Message</span>
+                  <Send size={14} />
+                </>
+              )}
+
         </button>
       </form>
     </div>

@@ -12,6 +12,8 @@ export const NavBar: React.FC = () => {
 
   const scrollToId = (id: string) => {
     const el = document.getElementById(id);
+    console.log("Scrolling to ID:", id, el, activeSection);
+    setActiveSection(id);
     if (!el) return;
     const y =
       el.getBoundingClientRect().top + globalThis.scrollY - HEADER_OFFSET;
@@ -58,7 +60,7 @@ export const NavBar: React.FC = () => {
   return (
     <>
       <div className="fixed top-6 left-0 right-0 z-100 flex justify-center px-4 pointer-events-none">
-        <nav className="pointer-events-auto relative flex items-center gap-6 px-3 pl-4 py-2.5 rounded-full border border-white/10 bg-palantir-black/60 backdrop-blur-md shadow-2xl shadow-black/50 w-full max-w-3xl transition-all duration-300">
+        <nav className="pointer-events-auto relative flex items-center gap-6 px-3 pl-4 py-2.5 rounded-md border border-white/10 bg-palantir-black/60 backdrop-blur-md shadow-2xl shadow-black/50 w-full max-w-3xl transition-all duration-300">
           {/* Logo */}
           <div className="flex items-center gap-3 mr-auto">
             <div className="w-6 h-6 bg-black text-black flex items-center justify-center font-bold font-mono text-xs rounded-sm overflow-hidden">
@@ -85,11 +87,10 @@ export const NavBar: React.FC = () => {
                   e.preventDefault();
                   scrollToId(link.id);
                 }}
-                className={`text-[11px] font-mono uppercase tracking-widest px-3 py-1 rounded-full transition-all duration-300 ${
-                  activeSection === link.id
-                    ? "text-white bg-white/10 shadow-[0_0_10px_rgba(255,255,255,0.1)]"
-                    : "text-gray-400 hover:text-white hover:bg-white/5"
-                }`}
+                className={`text-[11px] font-mono uppercase tracking-widest px-3 py-1 rounded-md transition-all duration-300 ${activeSection === link.id
+                  ? "text-white bg-white/10 shadow-[0_0_10px_rgba(255,255,255,0.1)]"
+                  : "text-gray-400 hover:text-white hover:bg-white/5"
+                  }`}
               >
                 {link.name}
               </a>
@@ -107,7 +108,7 @@ export const NavBar: React.FC = () => {
                 e.preventDefault();
                 scrollToId("contact");
               }}
-              className="hidden md:flex items-center gap-2 px-4 py-1.5 bg-white text-black text-[10px] font-mono uppercase tracking-widest hover:bg-gray-200 rounded-full transition-all"
+              className="hidden md:flex items-center gap-2 px-4 py-1.5 bg-white text-black text-[10px] font-mono uppercase tracking-widest hover:bg-gray-200 rounded-md transition-all"
             >
               Contact
               <ArrowUpRight size={12} />
@@ -126,7 +127,7 @@ export const NavBar: React.FC = () => {
       {/* Mobile Menu Dropdown - Floating below */}
       {isMenuOpen && (
         <div className="fixed top-24 left-4 right-4 z-90 md:hidden flex flex-col items-center">
-          <div className="w-full max-w-3xl bg-palantir-black/95 backdrop-blur-xl border border-white/10 rounded-xl p-4 shadow-2xl flex flex-col gap-2">
+          <div className="w-full max-w-3xl bg-palantir-black/95 backdrop-blur-xl border border-white/10 rounded-md p-4 shadow-2xl flex flex-col gap-2">
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -136,11 +137,10 @@ export const NavBar: React.FC = () => {
                   scrollToId(link.id);
                   setIsMenuOpen(false);
                 }}
-                className={`w-full text-center py-3 text-xs font-mono uppercase tracking-widest rounded-lg transition-colors ${
-                  activeSection === link.id
-                    ? "text-white bg-white/10"
-                    : "text-gray-300 hover:bg-white/5"
-                }`}
+                className={`w-full text-center py-3 text-xs font-mono uppercase tracking-widest rounded-lg transition-colors ${activeSection === link.id
+                  ? "text-white bg-white/10"
+                  : "text-gray-300 hover:bg-white/5"
+                  }`}
               >
                 {link.name}
               </a>
@@ -153,7 +153,7 @@ export const NavBar: React.FC = () => {
                 scrollToId("contact");
                 setIsMenuOpen(false);
               }}
-              className="w-full text-center py-3 text-xs font-mono uppercase tracking-widest text-white bg-white/10 hover:bg-white/20 rounded-lg transition-colors"
+              className="w-full text-center py-3 text-xs font-mono uppercase tracking-widest text-white bg-white/20 hover:bg-white/20 rounded-md transition-colors"
             >
               Get in Touch
             </a>
