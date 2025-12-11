@@ -163,9 +163,8 @@ export const Hero: React.FC = () => {
         {/* Main Text Block - Enable pointer events for text interaction */}
         <div className="flex-1 mb-12 md:mb-0 pointer-events-auto">
           <div
-            className={`inline-flex items-center gap-2 border border-white/10 rounded-full px-3 py-1 mb-8 backdrop-blur-md bg-white/5 shadow-[0_0_15px_rgba(255,255,255,0.05)] ${
-              isVisible ? "animate-fade-in-up" : "opacity-0"
-            }`}
+            className={`inline-flex items-center gap-2 border border-white/10 rounded-full px-3 py-1 mb-8 backdrop-blur-md bg-white/5 shadow-[0_0_15px_rgba(255,255,255,0.05)] ${isVisible ? "animate-fade-in-up" : "opacity-0"
+              }`}
             style={{ animationDelay: "100ms", animationFillMode: "both" }}
           >
             <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse shadow-[0_0_8px_#10b981]"></div>
@@ -175,9 +174,8 @@ export const Hero: React.FC = () => {
           </div>
 
           <h1
-            className={`text-5xl md:text-7xl lg:text-8xl font-sans font-medium text-white tracking-tighter leading-[0.9] mb-8 ${
-              isVisible ? "animate-fade-in-up" : "opacity-0"
-            }`}
+            className={`text-5xl md:text-7xl lg:text-8xl font-sans font-medium text-white tracking-tighter leading-[0.9] mb-8 ${isVisible ? "animate-fade-in-up" : "opacity-0"
+              }`}
             style={{ animationDelay: "300ms", animationFillMode: "both" }}
           >
             K4mp47, <br />
@@ -188,9 +186,8 @@ export const Hero: React.FC = () => {
           </h1>
 
           <p
-            className={`text-lg text-gray-400 max-w-md font-light leading-relaxed mb-10 border-l border-gray-800 pl-6 ${
-              isVisible ? "animate-fade-in-up" : "opacity-0"
-            }`}
+            className={`text-lg text-gray-400 max-w-md font-light leading-relaxed mb-10 border-l border-gray-800 pl-6 ${isVisible ? "animate-fade-in-up" : "opacity-0"
+              }`}
             style={{ animationDelay: "500ms", animationFillMode: "both" }}
           >
             Crafting digital experiences with React, Node.js,
@@ -213,29 +210,28 @@ export const Hero: React.FC = () => {
 
         {/* Decorative Stats Column */}
         <div
-          className={`hidden lg:flex flex-col gap-6 w-64 mb-10 opacity-70 ${
-            isVisible ? "animate-fade-in-up" : "opacity-0"
-          }`}
+          className={`hidden lg:flex flex-col gap-6 w-64 mb-10 opacity-70 ${isVisible ? "animate-fade-in-up" : "opacity-0"
+            }`}
           style={{ animationDelay: "900ms", animationFillMode: "both" }}
         >
           <div className="border-t border-gray-800 pt-4">
             <div className="flex items-center gap-2 text-gray-500 mb-2">
               <Activity size={14} />
               <span className="text-[10px] font-mono uppercase tracking-widest">
-                Performance
+                Clean Code
               </span>
             </div>
-            <div className="text-2xl font-mono text-white">Top 1%</div>
+            <div className="text-2xl font-mono text-white">Is a must</div>
           </div>
 
           <div className="border-t border-gray-800 pt-4">
             <div className="flex items-center gap-2 text-gray-500 mb-2">
               <Circle size={14} />
               <span className="text-[10px] font-mono uppercase tracking-widest">
-                Stack Depth
+                Main Focus
               </span>
             </div>
-            <div className="text-2xl font-mono text-white">Full Cycle</div>
+            <div className="text-2xl font-mono text-white">Being productive</div>
           </div>
         </div>
       </div>
