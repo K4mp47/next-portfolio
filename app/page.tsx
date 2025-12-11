@@ -31,7 +31,7 @@ function App() {
                 Selected Works
               </h2>
               <p className="text-gray-400 text-sm max-w-lg">
-                A collection of production-grade web applications and systems.
+                A collection of web applications and systems.
               </p>
             </div>
             <div className="mt-4 md:mt-0">
@@ -92,8 +92,7 @@ function App() {
                   </div>
                   <p className="text-gray-500 max-w-md leading-relaxed mb-8">
                     Specializing in scalable frontend architecture, responsive
-                    design, and modern web performance standards. Building the
-                    future of the web, one component at a time.
+                    design, and modern web standards. Building the web, dreaming to work for a more secure world.
                   </p>
                   <a
                     href="/resume.pdf"

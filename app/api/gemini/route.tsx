@@ -42,6 +42,6 @@ export async function POST(req: Request) {
     return Response.json({ text: response.text });
   } catch (err) {
     console.error("Gemini Error:", err);
-    return Response.json({ error: "Gemini API error" }, { status: 500 });
+    return Response.json({ text: "Sorry, something went wrong. Please try again later or contact the developer." }, { status: 500 });
   }
 }

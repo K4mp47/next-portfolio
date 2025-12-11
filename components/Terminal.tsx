@@ -54,12 +54,6 @@ export const Terminal: React.FC = () => {
       setMessages((prev) => [...prev, modelMsg]);
     } catch (error) {
       console.error(error);
-      setMessages((prev) => [...prev, {
-        id: (Date.now() + 2).toString(),
-        role: "model",
-        text: "Sorry, something went wrong. Please try again later.",
-        timestamp: new Date(),
-      }]);
     } finally {
       setIsLoading(false);
     }

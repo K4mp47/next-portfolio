@@ -180,11 +180,11 @@ export const Hero: React.FC = () => {
             }`}
             style={{ animationDelay: "300ms", animationFillMode: "both" }}
           >
-            Full-Stack <br />
+            K4mp47, <br />
             <span className="text-transparent bg-clip-text bg-linear-to-r from-white via-gray-500 to-white bg-size-[200%_auto] animate-shimmer">
-              Web Engineering
+              Web & Software
             </span>{" "}
-            <br />& Architecture.
+            <br /> Engineer.
           </h1>
 
           <p
@@ -193,9 +193,8 @@ export const Hero: React.FC = () => {
             }`}
             style={{ animationDelay: "500ms", animationFillMode: "both" }}
           >
-            Crafting high-performance digital experiences with React, Node.js,
-            and modern cloud infrastructure. Focused on scalability,
-            accessibility, and clean code.
+            Crafting digital experiences with React, Node.js,
+            and modern web applications. Focused on accessibility, and clean code.
           </p>
 
           <div
