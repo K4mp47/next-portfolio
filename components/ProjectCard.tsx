@@ -30,10 +30,10 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             </span>
           </div>
         )}
-        <div className="absolute top-4 right-4 bg-black border border-white/20 px-2 py-1">
-          <span className="text-[10px] font-mono uppercase tracking-widest text-white">
-            {project.category}
-          </span>
+        <div className="absolute rounded-sm top-4 right-4 bg-black border border-white/20 px-2 py-1 uppercase text-white font-mono text-[10px]">
+          {/* <span className="text-[10px] font-mono uppercase tracking-widest text-white"> */}
+          {project.category}
+          {/* </span> */}
         </div>
       </div>
 
