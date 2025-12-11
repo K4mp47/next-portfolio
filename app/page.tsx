@@ -113,7 +113,7 @@ function App() {
                     </h4>
                     <ul className="space-y-2 text-gray-500 text-sm">
                       <li>Treviso, IT</li>
-                      <li className="text-gray-600">Available for Remote</li>
+                      <li className="text-gray-500 flex gap-1 items-center"><div className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse"></div>Available for Remote</li>
                     </ul>
                   </div>
                   <div>
@@ -123,7 +123,7 @@ function App() {
                     <ul className="space-y-2 text-gray-500 text-sm">
                       <li>
                         <a
-                          href="#"
+                          href="https://github.com/K4mp47"
                           className="hover:text-white transition-colors"
                         >
                           GitHub
@@ -131,7 +131,7 @@ function App() {
                       </li>
                       <li>
                         <a
-                          href="#"
+                          href="https://www.linkedin.com/in/alberto-campagnolo-916b86265/"
                           className="hover:text-white transition-colors"
                         >
                           LinkedIn
