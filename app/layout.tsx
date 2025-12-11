@@ -24,8 +24,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <title>Web Developer Portfolio</title>
+        <meta
+          name="description"
+          content="Portfolio of a web developer specializing in modern web applications and AI integration."
+        />
+        <link rel="icon" type="image/svg+xml" href="/k.ico" />
+      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]`}
       >
         {children}
       </body>
