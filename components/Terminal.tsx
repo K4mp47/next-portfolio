@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Loader2, Send, Terminal as TerminalIcon } from "lucide-react";
 import { ChatMessage } from "@/types";
-import { queryIntelligence } from "@/services/geminiService";
+import { queryIntelligence } from "@/netlify/functions/query";
 
 export const Terminal: React.FC = () => {
   const [messages, setMessages] = useState<ChatMessage[]>([
@@ -81,16 +81,14 @@ export const Terminal: React.FC = () => {
         {messages.map((msg) => (
           <div
             key={msg.id}
-            className={`flex ${
-              msg.role === "user" ? "justify-end" : "justify-start"
-            }`}
+            className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"
+              }`}
           >
             <div
-              className={`max-w-[80%] p-4 border ${
-                msg.role === "user"
+              className={`max-w-[80%] p-4 border ${msg.role === "user"
                   ? "bg-palantir-gray/30 border-gray-600 text-gray-200"
                   : "bg-blue-950/20 border-blue-900/50 text-blue-100"
-              }`}
+                }`}
             >
               <div className="text-[10px] text-gray-500 mb-1 uppercase tracking-wider opacity-70">
                 {msg.role === "user" ? "VISITOR" : "ASSISTANT"} {"//"}
