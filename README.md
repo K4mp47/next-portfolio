@@ -1,6 +1,6 @@
 This is a personal portfolio website built with [Next.js](https://nextjs.org) and bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-You can view the live version of the portfolio [here](https://your-portfolio-url.com). 
+You can view the live version of the portfolio [here](https://k4mp47.netlify.app). 
 
 ## Getting Started
 
