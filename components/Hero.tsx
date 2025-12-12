@@ -114,40 +114,40 @@ export const Hero: React.FC = () => {
   return (
     <div
       ref={heroRef}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 perspective-1000"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16"
     >
       {/* 3D Animated Background */}
       <div className="absolute inset-0 z-0 bg-black flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,#0f172a_0%,#000000_100%)] opacity-40 z-0"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,#0f172a_0%,#000000_100%)] z-0"></div>
 
         {/* 3D Tilted Container */}
         <div
-          className="absolute w-[150vw] h-[150vh] flex flex-col gap-8 justify-center items-center opacity-30 transition-transform duration-200 ease-out"
+          className="absolute w-[150vw] h-[150vh] flex flex-col gap-8 justify-center items-center opacity-70 transition-transform duration-200 ease-out"
           style={{
             transform: `
-                    rotateX(${20 + mousePosition.y * 5}deg) 
-                    rotateY(${-10 + mousePosition.x * 5}deg) 
+                    rotateX(${20}deg) 
+                    rotateY(${-10}deg) 
                     rotateZ(${20}deg) 
                     scale(1.2)
                 `,
           }}
         >
           {/* Row 1: Marquee Left */}
-          <div className="flex w-max animate-marquee">
+          <div className="flex w-max animate-marquee translate-x-1/3">
             {[...row1, ...row1, ...row1, ...row1].map((item, i) => (
               <Card key={`r1-${i}`} item={item} />
             ))}
           </div>
 
           {/* Row 2: Marquee Right */}
-          <div className="flex w-max animate-marquee-reverse">
+          <div className="flex w-max animate-marquee-reverse translate-x-1/3">
             {[...row2, ...row2, ...row2, ...row2].map((item, i) => (
               <Card key={`r2-${i}`} item={item} />
             ))}
           </div>
 
           {/* Row 3: Marquee Left */}
-          <div className="flex w-max animate-marquee">
+          <div className="flex w-max animate-marquee translate-x-1/3">
             {[...row3, ...row3, ...row3, ...row3].map((item, i) => (
               <Card key={`r3-${i}`} item={item} />
             ))}

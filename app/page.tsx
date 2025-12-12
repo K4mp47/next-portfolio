@@ -25,7 +25,7 @@ function App() {
           id="projects"
           className="py-24 max-w-7xl mx-auto px-6 scroll-mt-32"
         >
-          <div className="flex flex-col md:flex-row justify-between items-end mb-16 border-b border-gray-800 pb-6">
+          <div className="flex flex-col md:flex-row justify-between items-start mb-16 border-b border-gray-800 pb-6">
             <div className="mb-12 border-l-2 border-white pl-6">
               <h2 className="text-3xl font-sans font-light tracking-tight text-white mb-2">
                 Selected Works
@@ -55,14 +55,25 @@ function App() {
           id="terminal"
           className="bg-linear-to-b from-palantir-black to-palantir-dark py-24 px-6 scroll-mt-32"
         >
-          <div className="max-w-4xl mx-auto text-center mb-12">
-            <h2 className="text-3xl font-sans font-light text-white mb-4">
-              Interactive Terminal
-            </h2>
-            <p className="text-gray-400">
-              Query the AI assistant about my technical experience, work
-              history, and availability.
-            </p>
+          {/* <div className="max-w-4xl mx-auto text-center mb-12"> */}
+          {/*   <h2 className="text-3xl font-sans font-light text-white mb-4"> */}
+          {/*     Interactive Terminal */}
+          {/*   </h2> */}
+          {/*   <p className="text-gray-400"> */}
+          {/*     Query the AI assistant about my technical experience, work */}
+          {/*     history, and availability. */}
+          {/*   </p> */}
+          {/* </div> */}
+          <div className="max-w-7xl mx-auto xl:px-6">
+            <div className="mb-12 border-l-2 border-white pl-6">
+              <h2 className="text-3xl font-sans font-light tracking-tight text-white mb-2">
+                Interactive Terminal
+              </h2>
+              <p className="text-gray-400 text-sm max-w-lg">
+                Query the AI assistant about my technical experience, work
+                history, and availability.
+              </p>
+            </div>
           </div>
           <Terminal />
         </section>

@@ -1,5 +1,5 @@
 "use client";
-import { BugPlay, Shield } from "lucide-react";
+import { BugPlay, Flag, Shield } from "lucide-react";
 import React, { useEffect, useRef, useState } from "react";
 import {
   Cell,
@@ -25,10 +25,10 @@ const skillsData = [
 
 const compositionData = [
   { name: "TypeScript", value: 45, color: "#3B82F6" },
-  { name: "React / Next", value: 25, color: "#60A5FA" },
+  { name: "React / Next", value: 25, color: "#00B87A" },
   { name: "Node / Python", value: 15, color: "#93C5FD" },
   { name: "SQL / API", value: 5, color: "#1E40AF" },
-  { name: "C/C++", value: 10, color: "#2563EB" },
+  { name: "C/C++", value: 10, color: "#FB2C36" },
 ];
 
 const EXPERIENCE = [
@@ -76,17 +76,32 @@ export const SkillMatrix: React.FC = () => {
             Quantified proficiency and contribution metrics.
           </p>
         </div>
-        <div className="flex items-start gap-4 mb-10 max-w-xl pl-6">
-          <div className="p-2 bg-blue-500/10 border border-blue-500/20 rounded-lg mt-1 shrink-0">
-            <BugPlay size={24} className="text-blue-400" />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-10 border-t border-palantir-gray pt-8">
+          <div className="flex items-start gap-4 w-full">
+            <div className="p-2 bg-blue-500/10 border border-blue-500/20 rounded-lg mt-1 shrink-0">
+              <BugPlay size={24} className="text-blue-400" />
+            </div>
+            <div className="max-w-lg">
+              <h3 className="text-lg font-mono font-light text-blue-400 mb-1">
+                Active Research
+              </h3>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                Currenlty expanding expertise in <span className="text-gray-200">Cybersecurity</span> with a vision to specialize in network defence and web pentesting.
+              </p>
+            </div>
           </div>
-          <div>
-            <h3 className="text-lg font-mono font-light text-blue-400 mb-1">
-              Active Research
-            </h3>
-            <p className="text-gray-400 text-sm leading-relaxed">
-              Currenlty expanding expertise in <span className="text-gray-200">Cybersecurity</span> with a vision to specialize in network defence and web pentesting.
-            </p>
+          <div className="flex items-start gap-4 w-full">
+            <div className="p-2 bg-red-500/10 border border-red-500/20 rounded-lg mt-1 shrink-0">
+              <Flag size={24} className="text-red-500" />
+            </div>
+            <div className="max-w-lg">
+              <h3 className="text-lg font-mono font-light text-red-400 mb-1">
+                CTF Enthusiast
+              </h3>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                Passionate about Capture The Flag (CTF) competitions, honing skills in real-world cybersecurity challenges and problem-solving.
+              </p>
+            </div>
           </div>
         </div>
 
@@ -175,7 +190,7 @@ export const SkillMatrix: React.FC = () => {
         </div>
 
         {/* Experience Section */}
-        <div className="border-t border-palantir-gray pt-12">
+        <div className="border-palantir-gray pt-12">
           <div className="mb-12 border-l-2 border-white pl-6">
             <h3 className="text-2xl font-sans font-light tracking-tight text-white mb-2">
               Operational History
