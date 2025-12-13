@@ -99,7 +99,7 @@ export const SkillMatrix: React.FC = () => {
                 CTF Enthusiast
               </h3>
               <p className="text-gray-400 text-sm leading-relaxed">
-                Passionate about Capture The Flag (CTF) competitions, honing skills in real-world cybersecurity challenges and problem-solving.
+                Passionate about <span className="text-gray-200">Capture The Flag (CTF)</span> competitions, honing skills in real-world cybersecurity challenges and problem-solving.
               </p>
             </div>
           </div>
