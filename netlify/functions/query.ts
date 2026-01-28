@@ -1,4 +1,4 @@
-import { GoogleGenAI, GenerateContentResponse } from "@google/genai";
+import { GenerateContentResponse, GoogleGenAI } from "@google/genai";
 
 // Initialize Gemini Client
 // IMPORTANT: Access API key from process.env.API_KEY
@@ -24,16 +24,18 @@ Guidelines:
 - If asked about specific projects, you can mention general expertise in creating applications.
 `;
 
-export const queryIntelligence = async (userPrompt: string): Promise<string> => {
+export const queryIntelligence = async (
+  userPrompt: string,
+): Promise<string> => {
   try {
     const response: GenerateContentResponse = await ai.models.generateContent({
-      model: 'gemini-2.5-flash-lite',
+      model: "gemini-2.5-flash-lite",
       contents: userPrompt,
       config: {
         systemInstruction: SYSTEM_INSTRUCTION,
         temperature: 0.7,
         maxOutputTokens: 200,
-      }
+      },
     });
 
     return response.text || "Connection interrupted. Re-establishing link...";
