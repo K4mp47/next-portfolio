@@ -92,7 +92,10 @@ export const SkillMatrix: React.FC = () => {
                 Active Research
               </h3>
               <p className="text-gray-400 text-sm leading-relaxed">
-                Currenlty expanding expertise in <span className="text-gray-200">Cybersecurity</span> with a vision to specialize in network defence and web pentesting.
+                Currenlty expanding expertise in{" "}
+                <span className="text-gray-200">Cybersecurity</span>{" "}
+                with a vision to specialize in network defence and web
+                pentesting.
               </p>
             </div>
           </div>
@@ -105,7 +108,11 @@ export const SkillMatrix: React.FC = () => {
                 CTF Enthusiast
               </h3>
               <p className="text-gray-400 text-sm leading-relaxed">
-                Passionate about <span className="text-gray-200">Capture The Flag (CTF)</span> competitions, honing skills in real-world cybersecurity challenges and problem-solving.
+                Passionate about{" "}
+                <span className="text-gray-200">Capture The Flag (CTF)</span>
+                {" "}
+                competitions, honing skills in real-world cybersecurity
+                challenges and problem-solving.
               </p>
             </div>
           </div>
@@ -202,7 +209,7 @@ export const SkillMatrix: React.FC = () => {
               Operational History
             </h3>
             <p className="text-gray-400 max-w-xl text-sm">
-              Chronological record of deployments and roles.
+              Chronological record of my professional roles.
             </p>
           </div>
 

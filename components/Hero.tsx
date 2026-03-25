@@ -40,8 +40,8 @@ export const Hero: React.FC = () => {
 
     const handleMouseMove = (e: MouseEvent) => {
       if (!heroRef.current) return;
-      const { left, top, width, height } =
-        heroRef.current.getBoundingClientRect();
+      const { left, top, width, height } = heroRef.current
+        .getBoundingClientRect();
       const x = (e.clientX - left) / width - 0.5;
       const y = (e.clientY - top) / height - 0.5;
       setMousePosition({ x, y });
@@ -58,8 +58,8 @@ export const Hero: React.FC = () => {
   const scrollToId = (id: string) => {
     const el = document.getElementById(id);
     if (!el) return;
-    const y =
-      el.getBoundingClientRect().top + globalThis.scrollY - HEADER_OFFSET;
+    const y = el.getBoundingClientRect().top + globalThis.scrollY -
+      HEADER_OFFSET;
     try {
       globalThis.history.pushState(null, "", `#${id}`);
     } catch (err) {
@@ -118,7 +118,8 @@ export const Hero: React.FC = () => {
     >
       {/* 3D Animated Background */}
       <div className="absolute inset-0 z-0 bg-black flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,#0f172a_0%,#000000_100%)] z-0"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,#0f172a_0%,#000000_100%)] z-0">
+        </div>
 
         {/* 3D Tilted Container */}
         <div
@@ -155,7 +156,8 @@ export const Hero: React.FC = () => {
         </div>
 
         {/* Vignette Mask to fade edges */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,black_85%)] z-10 pointer-events-none"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,black_85%)] z-10 pointer-events-none">
+        </div>
       </div>
 
       {/* Content */}
@@ -163,35 +165,39 @@ export const Hero: React.FC = () => {
         {/* Main Text Block - Enable pointer events for text interaction */}
         <div className="flex-1 mb-12 md:mb-0 pointer-events-auto">
           <div
-            className={`inline-flex items-center gap-2 border border-white/10 rounded-full px-3 py-1 mb-8 backdrop-blur-md bg-white/5 shadow-[0_0_15px_rgba(255,255,255,0.05)] ${isVisible ? "animate-fade-in-up" : "opacity-0"
-              }`}
+            className={`inline-flex items-center gap-2 border border-white/10 rounded-full px-3 py-1 mb-8 backdrop-blur-md bg-white/5 shadow-[0_0_15px_rgba(255,255,255,0.05)] ${
+              isVisible ? "animate-fade-in-up" : "opacity-0"
+            }`}
             style={{ animationDelay: "100ms", animationFillMode: "both" }}
           >
-            <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse shadow-[0_0_8px_#10b981]"></div>
+            <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse shadow-[0_0_8px_#10b981]">
+            </div>
             <span className="text-[10px] uppercase font-mono tracking-widest text-gray-300">
               Open to Opportunities
             </span>
           </div>
 
           <h1
-            className={`text-5xl md:text-7xl lg:text-8xl font-sans font-medium text-white tracking-tighter leading-[0.9] mb-8 ${isVisible ? "animate-fade-in-up" : "opacity-0"
-              }`}
+            className={`text-5xl md:text-7xl lg:text-8xl font-sans font-medium text-white tracking-tighter leading-[0.9] mb-8 ${
+              isVisible ? "animate-fade-in-up" : "opacity-0"
+            }`}
             style={{ animationDelay: "300ms", animationFillMode: "both" }}
           >
             K4mp47, <br />
             <span className="text-transparent bg-clip-text bg-linear-to-r from-white via-gray-500 to-white bg-size-[200%_auto] animate-shimmer">
               Web & Software
             </span>{" "}
-            <br /> Engineer.
+            <br /> Developer.
           </h1>
 
           <p
-            className={`text-lg text-gray-400 max-w-md font-light leading-relaxed mb-10 border-l border-gray-800 pl-6 ${isVisible ? "animate-fade-in-up" : "opacity-0"
-              }`}
+            className={`text-lg text-gray-400 max-w-md font-light leading-relaxed mb-10 border-l border-gray-800 pl-6 ${
+              isVisible ? "animate-fade-in-up" : "opacity-0"
+            }`}
             style={{ animationDelay: "500ms", animationFillMode: "both" }}
           >
-            Crafting digital experiences with React, Node.js,
-            and modern web applications. Focused on accessibility, and clean code.
+            Crafting digital experiences with React, Node.js, and modern web
+            applications. Focused on accessibility, and clean code.
           </p>
 
           <div
@@ -210,8 +216,9 @@ export const Hero: React.FC = () => {
 
         {/* Decorative Stats Column */}
         <div
-          className={`hidden lg:flex flex-col gap-6 w-64 mb-10 opacity-70 ${isVisible ? "animate-fade-in-up" : "opacity-0"
-            }`}
+          className={`hidden lg:flex flex-col gap-6 w-64 mb-10 opacity-70 ${
+            isVisible ? "animate-fade-in-up" : "opacity-0"
+          }`}
           style={{ animationDelay: "900ms", animationFillMode: "both" }}
         >
           <div className="border-t border-gray-800 pt-4">
@@ -231,7 +238,10 @@ export const Hero: React.FC = () => {
                 Main Focus
               </span>
             </div>
-            <div className="text-2xl font-mono text-white">Being productive</div>
+            <div className="text-2xl font-mono text-white">
+              Being productive
+            </div>
+ 
           </div>
         </div>
       </div>
