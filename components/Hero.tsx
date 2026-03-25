@@ -114,7 +114,7 @@ export const Hero: React.FC = () => {
   return (
     <div
       ref={heroRef}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16"
+      className="relative min-h-screen flex items-center justify-start overflow-hidden pt-16"
     >
       {/* 3D Animated Background */}
       <div className="absolute inset-0 z-0 bg-black flex items-center justify-center overflow-hidden">
@@ -159,7 +159,7 @@ export const Hero: React.FC = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-20 max-w-7xl mx-auto px-6 w-full flex flex-col md:flex-row items-end pb-24 md:pb-0 pointer-events-none">
+      <div className="relative z-20 mx-auto px-6 max-w-7xl w-full flex flex-col md:flex-row items-start pb-24 md:pb-0 pointer-events-none">
         {/* Main Text Block - Enable pointer events for text interaction */}
         <div className="flex-1 mb-12 md:mb-0 pointer-events-auto">
           <div

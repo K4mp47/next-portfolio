@@ -105,14 +105,14 @@ function App() {
                     Specializing in scalable frontend architecture, responsive
                     design, and modern web standards. Building the web, dreaming to work for a more secure world.
                   </p>
-                  <a
+                  {/* <a
                     href="/resume.pdf"
                     target="_blank"
                     className="inline-flex rounded-md items-center gap-2 text-white border border-gray-700 px-5 py-2.5 hover:bg-white/10 transition-colors font-mono text-xs uppercase tracking-widest"
                   >
                     <Download size={14} />
                     Download Resume
-                  </a>
+                  </a>*/}
                 </div>
 
                 {/* Links Grid */}
@@ -161,7 +161,7 @@ function App() {
 
                 <div className="text-[10px] text-gray-700 font-mono uppercase tracking-widest pt-12 mt-12 border-t border-gray-900/50">
                   <span>
-                    © 2024 Web Developer Portfolio // System Status: Online
+                    © 2026 Web Developer Portfolio // System Status: Online
                   </span>
                 </div>
               </div>

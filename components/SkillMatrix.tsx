@@ -33,6 +33,12 @@ const compositionData = [
 
 const EXPERIENCE = [
   {
+    role: "Software Developer",
+    company: "Atec Srl",
+    period: "2026 - PRESENT",
+    description: "Software Developer job at ATEC SRL",
+  },
+  {
     role: "Bachelor Data Science",
     company: "Univerity Ca' Foscari Venice",
     period: "2023 - PRESENT",
@@ -206,7 +212,7 @@ export const SkillMatrix: React.FC = () => {
                 key={index}
                 className="grid grid-cols-1 md:grid-cols-12 gap-6 py-8 border-b border-palantir-gray group hover:bg-white/5 transition-colors px-4 md:px-0"
               >
-                <div className="md:col-span-3">
+                <div className="md:col-span-3 ml-4">
                   <div className="font-mono text-xs text-blue-400 mb-1 tracking-widest uppercase">
                     {job.period}
                   </div>
