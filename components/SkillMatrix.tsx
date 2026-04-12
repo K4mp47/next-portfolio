@@ -34,7 +34,7 @@ const compositionData = [
 const EXPERIENCE = [
   {
     role: "Software Developer",
-    company: "Atec Srl",
+    company: "TUTONDO - A.T.E.C Srl"
     period: "2026 - PRESENT",
     description: "Software Developer job at ATEC SRL",
   },
