@@ -113,6 +113,7 @@ export const Hero: React.FC = () => {
 
   return (
     <div
+      id="home"
       ref={heroRef}
       className="relative min-h-screen flex items-center justify-start overflow-hidden pt-16"
     >

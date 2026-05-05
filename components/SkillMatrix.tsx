@@ -16,11 +16,11 @@ import {
 
 const skillsData = [
   { subject: "Frontend", A: 95, fullMark: 100 },
-  { subject: "Backend / API", A: 70, fullMark: 100 },
-  { subject: "DevOps / CI/CD", A: 45, fullMark: 100 },
-  { subject: "System Design", A: 75, fullMark: 100 },
+  { subject: "Backend / API", A: 60, fullMark: 100 },
+  { subject: "DevOps / CI/CD", A: 30, fullMark: 100 },
+  { subject: "System Design", A: 55, fullMark: 100 },
   { subject: "GenAI", A: 85, fullMark: 100 },
-  { subject: "UX / UI", A: 60, fullMark: 100 },
+  { subject: "UX / UI", A: 70, fullMark: 100 },
 ];
 
 const compositionData = [
@@ -219,7 +219,7 @@ export const SkillMatrix: React.FC = () => {
                 key={index}
                 className="grid grid-cols-1 md:grid-cols-12 gap-6 py-8 border-b border-palantir-gray group hover:bg-white/5 transition-colors px-4 md:px-0"
               >
-                <div className="md:col-span-3 ml-4">
+                <div className="md:col-span-3 md:ml-2">
                   <div className="font-mono text-xs text-blue-400 mb-1 tracking-widest uppercase">
                     {job.period}
                   </div>
