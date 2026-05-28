@@ -111,5 +111,18 @@ export const PROJECTS: Project[] = [
     imageUrl: "https://picsum.photos/800/609",
     link: "https://doculytics-ai.netlify.app/",
   },
+  {
+    id: "10",
+    title: "3D Photos Gallery",
+    category: "Template Photographer Portfolio",
+    description:
+      "A small portfolio template for a photographer portfolio with 3D animations. It's a personal project",
+    techStack: ["Vite.js", "TypeScript", "Tailwindcss", "motion"],
+    metrics: [
+      { label: "Status", value: "available for selling" },
+    ],
+    imageUrl: "https://picsum.photos/800/610",
+    link: "https://author-gallery.netlify.app/",
+  }
 ];
 
