@@ -1,528 +1,184 @@
 import { BlogPost } from "@/types";
 
 export const BLOG_POSTS: BlogPost[] = [
-  {
-    slug: "future-of-ai-frontend",
-    title: "The Future of AI in Frontend Development",
-    excerpt: "Exploring how LLMs and generative AI are reshaping the way we build user interfaces.",
-    date: "May 10, 2026",
-    readTime: "5 min read",
-    coverImage: "https://picsum.photos/seed/ai/1200/600",
-    content: [
-      {
-        type: "paragraph",
-        text: "The landscape of frontend development is undergoing a seismic shift. No longer are we just writing code; we are orchestrating intelligence. From GitHub Copilot to Vercel's v0, the tools at our disposal are becoming increasingly proactive.",
-      },
-      {
-        type: "heading",
-        level: 2,
-        text: "The Rise of Component Generation",
-      },
-      {
-        type: "paragraph",
-        text: "Imagine a world where you describe a complex dashboard in natural language, and the underlying system generates a perfectly typed, accessible, and themed React component. This isn't a distant future; it's happening now.",
-      },
-      {
-        type: "image",
-        url: "https://picsum.photos/seed/coding/800/400",
-        caption: "AI-assisted coding is becoming the new standard.",
-      },
-      {
-        type: "heading",
-        level: 2,
-        text: "Challenges Ahead",
-      },
-      {
-        type: "paragraph",
-        text: "However, this transition isn't without its hurdles. Reliability, security, and the 'black box' nature of some models remain significant concerns for enterprise-scale applications.",
-      },
-      {
-        type: "code",
-        code: "const generateUI = async (prompt: string) => {\n  const response = await ai.generate(prompt);\n  return response.component;\n};",
-        language: "typescript",
-      },
-    ],
-  },
-  {
-    slug: "minimalist-design-philosophy",
-    title: "Why Minimalist Design is the Ultimate Sophistication",
-    excerpt: "In an age of information overload, less is truly more. Let's dive into the core principles of minimalism in digital products.",
-    date: "May 12, 2026",
-    readTime: "4 min read",
-    coverImage: "https://picsum.photos/seed/minimal/1200/600",
-    content: [
-      {
-        type: "paragraph",
-        text: "Minimalism is not just about having fewer elements. It's about having the right elements. It's the intentional reduction of noise to let the signal shine through.",
-      },
-      {
-        type: "heading",
-        level: 2,
-        text: "The Power of Whitespace",
-      },
-      {
-        type: "paragraph",
-        text: "Whitespace, or negative space, is one of the most powerful tools in a designer's arsenal. It provides breathing room, defines hierarchy, and guides the user's eye.",
-      },
-      {
-        type: "image",
-        url: "https://picsum.photos/seed/design/800/400",
-        caption: "Clarity over complexity.",
-      },
-    ],
-  },
- {
-    slug: "building-scalable-nextjs-apps",
-    title: "Building Scalable Systems with Next.js",
-    excerpt: "Best practices for architecting large-scale applications with the latest Next.js features.",
-    date: "May 15, 2026",
-    readTime: "7 min read",
-    coverImage: "https://picsum.photos/seed/nextjs/1200/600",
-    content: [
-      {
-        type: "paragraph",
-        text: "Next.js has become the de-facto standard for building React applications. With the introduction of the App Router, the way we think about routing, data fetching, and caching has fundamentally changed.",
-      },
-      {
-        type: "heading",
-        level: 2,
-        text: "Server Components and the Edge",
-      },
-      {
-        type: "paragraph",
-        text: "React Server Components (RSC) allow us to move logic to the server, reducing the amount of JavaScript sent to the client and improving performance significantly.",
-      },
-      {
-        type: "code",
-        code: "// Example of a Server Component fetching data\nasync function Page() {\n  const data = await fetchData();\n  return <Content data={data} />;\n}",
-        language: "typescript",
-      },
-    ],
-  },
-  {
-    slug: "mastering-typescript-generics",
-    title: "Mastering TypeScript Generics",
-    excerpt: "Deep dive into one of TypeScript's most powerful features for building reusable components.",
-    date: "May 18, 2026",
-    readTime: "6 min read",
-    coverImage: "https://picsum.photos/seed/ts/1200/600",
-    content: [
-      {
-        type: "paragraph",
-        text: "Generics provide a way to create reusable components that can work with a variety of types rather than a single one. This allows users to consume these components and use their own types.",
-      },
-    ],
-  },
-  {
-    slug: "the-art-of-css-grid",
-    title: "The Art of CSS Grid",
-    excerpt: "Mastering complex layouts with ease using the power of CSS Grid.",
-    date: "May 20, 2026",
-    readTime: "4 min read",
-    coverImage: "https://picsum.photos/seed/grid/1200/600",
-    content: [
-      {
-        type: "paragraph",
-        text: "CSS Grid is a 2D layout system for the web. It lets you lay content out in rows and columns, and has many features that make building complex layouts straightforward.",
-      },
-    ],
-  },
-  {
-    slug: "testing-react-with-vitest",
-    title: "Testing React with Vitest",
-    excerpt: "Why Vitest is the modern alternative to Jest for Vite-based projects.",
-    date: "May 22, 2026",
-    readTime: "5 min read",
-    coverImage: "https://picsum.photos/seed/test/1200/600",
-    content: [
-      {
-        type: "paragraph",
-        text: "Vitest is a blazing fast unit test framework powered by Vite. It provides a compatible API with Jest, making it easy to migrate.",
-      },
-    ],
-  },
+{
+  slug: "google-ai-studio-3d-animation",
+  title: "How Google AI Studio Is Making 3D Animation Accessible to Everyone",
+  excerpt:
+    "From cinematic camera movements to interactive portfolio experiences, Google AI Studio is lowering the barrier to creating 3D web animations without advanced technical skills.",
+  date: "May 28, 2026",
+  readTime: "6 min read",
+  coverImage: "https://picsum.photos/seed/3d-ai/1200/600",
 
- {
-    slug: "building-scalable-nextjs-apps",
-    title: "Building Scalable Systems with Next.js",
-    excerpt: "Best practices for architecting large-scale applications with the latest Next.js features.",
-    date: "May 15, 2026",
-    readTime: "7 min read",
-    coverImage: "https://picsum.photos/seed/nextjs/1200/600",
-    content: [
-      {
-        type: "paragraph",
-        text: "Next.js has become the de-facto standard for building React applications. With the introduction of the App Router, the way we think about routing, data fetching, and caching has fundamentally changed.",
-      },
-      {
-        type: "heading",
-        level: 2,
-        text: "Server Components and the Edge",
-      },
-      {
-        type: "paragraph",
-        text: "React Server Components (RSC) allow us to move logic to the server, reducing the amount of JavaScript sent to the client and improving performance significantly.",
-      },
-      {
-        type: "code",
-        code: "// Example of a Server Component fetching data\nasync function Page() {\n  const data = await fetchData();\n  return <Content data={data} />;\n}",
-        language: "typescript",
-      },
-    ],
-  },
-  {
-    slug: "mastering-typescript-generics",
-    title: "Mastering TypeScript Generics",
-    excerpt: "Deep dive into one of TypeScript's most powerful features for building reusable components.",
-    date: "May 18, 2026",
-    readTime: "6 min read",
-    coverImage: "https://picsum.photos/seed/ts/1200/600",
-    content: [
-      {
-        type: "paragraph",
-        text: "Generics provide a way to create reusable components that can work with a variety of types rather than a single one. This allows users to consume these components and use their own types.",
-      },
-    ],
-  },
-  {
-    slug: "the-art-of-css-grid",
-    title: "The Art of CSS Grid",
-    excerpt: "Mastering complex layouts with ease using the power of CSS Grid.",
-    date: "May 20, 2026",
-    readTime: "4 min read",
-    coverImage: "https://picsum.photos/seed/grid/1200/600",
-    content: [
-      {
-        type: "paragraph",
-        text: "CSS Grid is a 2D layout system for the web. It lets you lay content out in rows and columns, and has many features that make building complex layouts straightforward.",
-      },
-    ],
-  },
-  {
-    slug: "testing-react-with-vitest",
-    title: "Testing React with Vitest",
-    excerpt: "Why Vitest is the modern alternative to Jest for Vite-based projects.",
-    date: "May 22, 2026",
-    readTime: "5 min read",
-    coverImage: "https://picsum.photos/seed/test/1200/600",
-    content: [
-      {
-        type: "paragraph",
-        text: "Vitest is a blazing fast unit test framework powered by Vite. It provides a compatible API with Jest, making it easy to migrate.",
-      },
-    ],
-  },
+  content: [
+    {
+      type: "paragraph",
+      text: "For years, creating immersive 3D experiences required a deep understanding of tools like Blender, Three.js, shaders, animation timelines, and rendering pipelines. Designers and developers often spent months mastering technical workflows before producing anything visually compelling. Today, that barrier is rapidly disappearing thanks to AI-powered tools like Google AI Studio.",
+    },
 
- {
-    slug: "building-scalable-nextjs-apps",
-    title: "Building Scalable Systems with Next.js",
-    excerpt: "Best practices for architecting large-scale applications with the latest Next.js features.",
-    date: "May 15, 2026",
-    readTime: "7 min read",
-    coverImage: "https://picsum.photos/seed/nextjs/1200/600",
-    content: [
-      {
-        type: "paragraph",
-        text: "Next.js has become the de-facto standard for building React applications. With the introduction of the App Router, the way we think about routing, data fetching, and caching has fundamentally changed.",
-      },
-      {
-        type: "heading",
-        level: 2,
-        text: "Server Components and the Edge",
-      },
-      {
-        type: "paragraph",
-        text: "React Server Components (RSC) allow us to move logic to the server, reducing the amount of JavaScript sent to the client and improving performance significantly.",
-      },
-      {
-        type: "code",
-        code: "// Example of a Server Component fetching data\nasync function Page() {\n  const data = await fetchData();\n  return <Content data={data} />;\n}",
-        language: "typescript",
-      },
-    ],
-  },
-  {
-    slug: "mastering-typescript-generics",
-    title: "Mastering TypeScript Generics",
-    excerpt: "Deep dive into one of TypeScript's most powerful features for building reusable components.",
-    date: "May 18, 2026",
-    readTime: "6 min read",
-    coverImage: "https://picsum.photos/seed/ts/1200/600",
-    content: [
-      {
-        type: "paragraph",
-        text: "Generics provide a way to create reusable components that can work with a variety of types rather than a single one. This allows users to consume these components and use their own types.",
-      },
-    ],
-  },
-  {
-    slug: "the-art-of-css-grid",
-    title: "The Art of CSS Grid",
-    excerpt: "Mastering complex layouts with ease using the power of CSS Grid.",
-    date: "May 20, 2026",
-    readTime: "4 min read",
-    coverImage: "https://picsum.photos/seed/grid/1200/600",
-    content: [
-      {
-        type: "paragraph",
-        text: "CSS Grid is a 2D layout system for the web. It lets you lay content out in rows and columns, and has many features that make building complex layouts straightforward.",
-      },
-    ],
-  },
-  {
-    slug: "testing-react-with-vitest",
-    title: "Testing React with Vitest",
-    excerpt: "Why Vitest is the modern alternative to Jest for Vite-based projects.",
-    date: "May 22, 2026",
-    readTime: "5 min read",
-    coverImage: "https://picsum.photos/seed/test/1200/600",
-    content: [
-      {
-        type: "paragraph",
-        text: "Vitest is a blazing fast unit test framework powered by Vite. It provides a compatible API with Jest, making it easy to migrate.",
-      },
-    ],
-  },
+    {
+      type: "heading",
+      level: 2,
+      text: "From Prompt to Animation",
+    },
 
-  {
-    slug: "building-scalable-nextjs-apps",
-    title: "Building Scalable Systems with Next.js",
-    excerpt: "Best practices for architecting large-scale applications with the latest Next.js features.",
-    date: "May 15, 2026",
-    readTime: "7 min read",
-    coverImage: "https://picsum.photos/seed/nextjs/1200/600",
-    content: [
-      {
-        type: "paragraph",
-        text: "Next.js has become the de-facto standard for building React applications. With the introduction of the App Router, the way we think about routing, data fetching, and caching has fundamentally changed.",
-      },
-      {
-        type: "heading",
-        level: 2,
-        text: "Server Components and the Edge",
-      },
-      {
-        type: "paragraph",
-        text: "React Server Components (RSC) allow us to move logic to the server, reducing the amount of JavaScript sent to the client and improving performance significantly.",
-      },
-      {
-        type: "code",
-        code: "// Example of a Server Component fetching data\nasync function Page() {\n  const data = await fetchData();\n  return <Content data={data} />;\n}",
-        language: "typescript",
-      },
-    ],
-  },
-  {
-    slug: "mastering-typescript-generics",
-    title: "Mastering TypeScript Generics",
-    excerpt: "Deep dive into one of TypeScript's most powerful features for building reusable components.",
-    date: "May 18, 2026",
-    readTime: "6 min read",
-    coverImage: "https://picsum.photos/seed/ts/1200/600",
-    content: [
-      {
-        type: "paragraph",
-        text: "Generics provide a way to create reusable components that can work with a variety of types rather than a single one. This allows users to consume these components and use their own types.",
-      },
-    ],
-  },
-  {
-    slug: "the-art-of-css-grid",
-    title: "The Art of CSS Grid",
-    excerpt: "Mastering complex layouts with ease using the power of CSS Grid.",
-    date: "May 20, 2026",
-    readTime: "4 min read",
-    coverImage: "https://picsum.photos/seed/grid/1200/600",
-    content: [
-      {
-        type: "paragraph",
-        text: "CSS Grid is a 2D layout system for the web. It lets you lay content out in rows and columns, and has many features that make building complex layouts straightforward.",
-      },
-    ],
-  },
-  {
-    slug: "testing-react-with-vitest",
-    title: "Testing React with Vitest",
-    excerpt: "Why Vitest is the modern alternative to Jest for Vite-based projects.",
-    date: "May 22, 2026",
-    readTime: "5 min read",
-    coverImage: "https://picsum.photos/seed/test/1200/600",
-    content: [
-      {
-        type: "paragraph",
-        text: "Vitest is a blazing fast unit test framework powered by Vite. It provides a compatible API with Jest, making it easy to migrate.",
-      },
-    ],
-  },
-  {
-    slug: "rust-for-web-developers",
-    title: "Rust for Web Developers",
-    excerpt: "Why you should consider learning Rust in 2026.",
-    date: "May 25, 2026",
-    readTime: "8 min read",
-    coverImage: "https://picsum.photos/seed/rust/1200/600",
-    content: [{ type: "paragraph", text: "Rust is a systems programming language that is gaining traction in the web world." }],
-  },
-  {
-    slug: "mastering-framer-motion",
-    title: "Mastering Framer Motion",
-    excerpt: "Create stunning animations in React with Framer Motion.",
-    date: "May 28, 2026",
-    readTime: "6 min read",
-    coverImage: "https://picsum.photos/seed/framer/1200/600",
-    content: [{ type: "paragraph", text: "Framer Motion is a production-ready motion library for React." }],
-  },
-  {
-    slug: "docker-for-frontend-devs",
-    title: "Docker for Frontend Developers",
-    excerpt: "Containerizing your frontend workflow.",
-    date: "June 01, 2026",
-    readTime: "5 min read",
-    coverImage: "https://picsum.photos/seed/docker/1200/600",
-    content: [{ type: "paragraph", text: "Docker simplifies the development environment setup." }],
-  },
-  {
-    slug: "graphql-vs-rest-2026",
-    title: "GraphQL vs REST in 2026",
-    excerpt: "Which one should you choose for your next project?",
-    date: "June 05, 2026",
-    readTime: "7 min read",
-    coverImage: "https://picsum.photos/seed/api/1200/600",
-    content: [{ type: "paragraph", text: "Both have their place, but the decision depends on your use case." }],
-  },
-  {
-    slug: "the-power-of-webassembly",
-    title: "The Power of WebAssembly",
-    excerpt: "Bringing near-native performance to the web.",
-    date: "June 10, 2026",
-    readTime: "10 min read",
-    coverImage: "https://picsum.photos/seed/wasm/1200/600",
-    content: [{ type: "paragraph", text: "WebAssembly is changing what's possible in the browser." }],
-  },
-  {
-    slug: "serverless-architecture-benefits",
-    title: "Serverless Architecture Benefits",
-    excerpt: "Scaling your application without managing servers.",
-    date: "June 15, 2026",
-    readTime: "6 min read",
-    coverImage: "https://picsum.photos/seed/serverless/1200/600",
-    content: [{ type: "paragraph", text: "Serverless lets you focus on code rather than infrastructure." }],
-  },
-  {
-    slug: "micro-frontends-guide",
-    title: "A Guide to Micro Frontends",
-    excerpt: "Breaking down the monolith into manageable pieces.",
-    date: "June 20, 2026",
-    readTime: "9 min read",
-    coverImage: "https://picsum.photos/seed/micro/1200/600",
-    content: [{ type: "paragraph", text: "Micro frontends allow teams to work independently on different parts of an app." }],
-  },
-  {
-    slug: "progressive-web-apps-revisited",
-    title: "Progressive Web Apps Revisited",
-    excerpt: "Why PWAs are still relevant in the mobile-first world.",
-    date: "June 25, 2026",
-    readTime: "5 min read",
-    coverImage: "https://picsum.photos/seed/pwa/1200/600",
-    content: [{ type: "paragraph", text: "PWAs provide a native-like experience on the web." }],
-  },
-  {
-    slug: "accessibility-in-modern-web",
-    title: "Accessibility in the Modern Web",
-    excerpt: "Building inclusive experiences for everyone.",
-    date: "June 30, 2026",
-    readTime: "7 min read",
-    coverImage: "https://picsum.photos/seed/a11y/1200/600",
-    content: [{ type: "paragraph", text: "Accessibility is not a feature, it's a fundamental requirement." }],
-  },
-  {
-    slug: "the-future-of-css",
-    title: "The Future of CSS",
-    excerpt: "New features coming to CSS in 2026 and beyond.",
-    date: "July 05, 2026",
-    readTime: "6 min read",
-    coverImage: "https://picsum.photos/seed/css/1200/600",
-    content: [{ type: "paragraph", text: "CSS is evolving rapidly with new features like anchor positioning." }],
-  },
-  {
-    slug: "nextjs-caching-deep-dive",
-    title: "Next.js Caching Deep Dive",
-    excerpt: "Understanding the Data Cache, Full Route Cache, and Router Cache.",
-    date: "July 10, 2026",
-    readTime: "12 min read",
-    coverImage: "https://picsum.photos/seed/cache/1200/600",
-    content: [{ type: "paragraph", text: "Caching is one of the most complex topics in Next.js." }],
-  },
-  {
-    slug: "react-server-components-patterns",
-    title: "React Server Components Patterns",
-    excerpt: "Best practices for building with RSC.",
-    date: "July 15, 2026",
-    readTime: "8 min read",
-    coverImage: "https://picsum.photos/seed/rsc/1200/600",
-    content: [{ type: "paragraph", text: "Server components are not just for data fetching." }],
-  },
-  {
-    slug: "monorepos-with-turborepo",
-    title: "Monorepos with Turborepo",
-    excerpt: "Managing multiple packages with ease.",
-    date: "July 20, 2026",
-    readTime: "7 min read",
-    coverImage: "https://picsum.photos/seed/turbo/1200/600",
-    content: [{ type: "paragraph", text: "Turborepo is a high-performance build system for monorepos." }],
-  },
-  {
-    slug: "supabase-vs-firebase",
-    title: "Supabase vs Firebase in 2026",
-    excerpt: "Which backend-as-a-service is right for you?",
-    date: "July 25, 2026",
-    readTime: "9 min read",
-    coverImage: "https://picsum.photos/seed/baas/1200/600",
-    content: [{ type: "paragraph", text: "Both offer great features, but Postgres vs NoSQL is a key factor." }],
-  },
-  {
-    slug: "shadcn-ui-customization",
-    title: "Shadcn UI Customization",
-    excerpt: "Making your UI truly unique with Radix and Tailwind.",
-    date: "July 30, 2026",
-    readTime: "6 min read",
-    coverImage: "https://picsum.photos/seed/ui/1200/600",
-    content: [{ type: "paragraph", text: "Shadcn UI is a collection of re-usable components." }],
-  },
-  {
-    slug: "edge-functions-explained",
-    title: "Edge Functions Explained",
-    excerpt: "Running code closer to your users for better performance.",
-    date: "August 05, 2026",
-    readTime: "5 min read",
-    coverImage: "https://picsum.photos/seed/edge/1200/600",
-    content: [{ type: "paragraph", text: "Edge functions are ideal for personalization and geolocation." }],
-  },
-  {
-    slug: "state-management-in-2026",
-    title: "State Management in 2026",
-    excerpt: "Zustand, Jotai, or Signal? What should you use?",
-    date: "August 10, 2026",
-    readTime: "8 min read",
-    coverImage: "https://picsum.photos/seed/state/1200/600",
-    content: [{ type: "paragraph", text: "State management has evolved beyond Redux." }],
-  },
-  {
-    slug: "web-vitals-optimization",
-    title: "Web Vitals Optimization",
-    excerpt: "Improving your site's performance for better SEO.",
-    date: "August 15, 2026",
-    readTime: "7 min read",
-    coverImage: "https://picsum.photos/seed/vitals/1200/600",
-    content: [{ type: "paragraph", text: "Core Web Vitals are critical for search ranking." }],
-  },
-  {
-    slug: "clean-code-principles",
-    title: "Clean Code Principles in TypeScript",
-    excerpt: "Writing maintainable and readable code.",
-    date: "August 20, 2026",
-    readTime: "9 min read",
-    coverImage: "https://picsum.photos/seed/clean/1200/600",
-    content: [{ type: "paragraph", text: "Clean code is code that is easy to understand." }],
-  },
+    {
+      type: "paragraph",
+      text: "Google AI Studio introduces a completely different workflow for creators. Instead of manually configuring every object, light source, or camera movement, users can describe scenes in natural language and let AI generate the foundation automatically.",
+    },
+
+    {
+      type: "paragraph",
+      text: "Imagine typing: 'Create a luxury fashion-inspired 3D portfolio with floating image cards, cinematic transitions, dark minimal aesthetics, and smooth scrolling interactions.' Traditionally, this would require knowledge of animation libraries, 3D coordinate systems, and frontend rendering optimizations.",
+    },
+
+    {
+      type: "image",
+      url: "https://picsum.photos/seed/fashion3d/1200/700",
+      caption: "Modern AI tools can generate immersive 3D-inspired layouts from simple prompts.",
+    },
+
+    {
+      type: "heading",
+      level: 2,
+      text: "AI-Generated Motion Systems",
+    },
+
+    {
+      type: "paragraph",
+      text: "One of the most impressive capabilities of modern AI-assisted development is generating dynamic motion systems automatically. Instead of calculating transforms manually, developers can rely on AI to scaffold smooth interpolation logic, depth layering, responsive spacing, and velocity-based animations.",
+    },
+
+    {
+      type: "paragraph",
+      text: "The following example demonstrates how an AI-generated card animation system can create cinematic floating layouts similar to modern interactive portfolios — all without requiring advanced 3D programming knowledge.",
+    },
+
+    {
+      type: "code",
+      language: "typescript",
+      code: `function interpolate(val: number, input: number[], output: number[]): number {
+  if (val <= input[0]) return output[0];
+  if (val >= input[input.length - 1]) return output[output.length - 1];
+
+  for (let i = 0; i < input.length - 1; i++) {
+    if (val >= input[i] && val <= input[i + 1]) {
+      const t = (val - input[i]) / (input[i + 1] - input[i]);
+      return output[i] + t * (output[i + 1] - output[i]);
+    }
+  }
+
+  return output[output.length - 1];
+}
+
+function getCardStyles(
+  index: number,
+  totalCards: number,
+  y: number,
+  vel: number,
+  isMobile: boolean
+) {
+  const CYCLE_HEIGHT = 3600;
+
+  const raw = y / CYCLE_HEIGHT;
+  const wrapped = raw % 1;
+
+  const p = ((index / totalCards - wrapped + 1.5) % 1) - 0.5;
+
+  const pInput = [-0.5, -0.3, -0.1, 0.1, 0.3, 0.5];
+
+  const xRange = isMobile
+    ? [-450, -250, -50, 150, 350, 550]
+    : [-1100, -650, -200, 450, 900, 1350];
+
+  const yRange = isMobile
+    ? [500, 270, 60, -150, -360, -580]
+    : [1100, 650, 200, -400, -900, -1450];
+
+  const zRange = isMobile
+    ? [1200, 750, 300, -300, -850, -1400]
+    : [2700, 1800, 900, -600, -1500, -2700];
+
+  const baseX = interpolate(p, pInput, xRange);
+  const baseY = interpolate(p, pInput, yRange);
+  const baseZ = interpolate(p, pInput, zRange);
+
+  const rx = 0;
+  const ry = -40;
+  const baseRz = 0;
+
+  const sc = isMobile
+    ? interpolate(p, pInput, [1.35, 1.15, 0.95, 0.75, 0.55, 0.35])
+    : interpolate(p, pInput, [1.5, 1.25, 1.05, 0.85, 0.65, 0.45]);
+
+  const opInput = [-0.5, -0.3, 0.3, 0.5];
+  const opOutput = [0, 1, 1, 0];
+
+  const op = interpolate(p, opInput, opOutput);
+
+  const waveInfluence = Math.max(0, 1 - Math.abs(p) * 2);
+
+  const x =
+    baseX + vel * (isMobile ? 0.06 : 0.15) * waveInfluence;
+
+  const yCoord =
+    baseY + vel * (isMobile ? 0.03 : 0.08) * waveInfluence;
+
+  const z =
+    baseZ + Math.abs(vel) * (isMobile ? 0.08 : 0.2) * waveInfluence;
+
+  const rz = baseRz - vel * 0.008 * waveInfluence;
+
+  return {
+    x,
+    y: yCoord,
+    z,
+    rx,
+    ry,
+    rz,
+    sc,
+    op,
+  };
+}`,
+    },
+
+    {
+      type: "heading",
+      level: 2,
+      text: "No Advanced 3D Knowledge Required",
+    },
+
+    {
+      type: "paragraph",
+      text: "The most important shift is accessibility. Creators who have never worked with WebGL, Three.js, shaders, or animation mathematics can now prototype immersive interfaces by collaborating with AI tools conversationally.",
+    },
+
+    {
+      type: "paragraph",
+      text: "Need smoother motion? Ask the AI. Want cinematic depth layering? Describe the effect. Looking for floating cards inspired by luxury fashion websites? Generate it with prompts. AI transforms the development process into something closer to creative direction than traditional programming.",
+    },
+
+    {
+      type: "image",
+      url: "https://picsum.photos/seed/portfolio3d/1000/600",
+      caption: "AI-generated layouts can emulate high-end interactive portfolio experiences.",
+    },
+
+    {
+      type: "heading",
+      level: 2,
+      text: "The Future of Interactive Design",
+    },
+
+    {
+      type: "paragraph",
+      text: "As AI-generated interfaces continue evolving, the line between designer and developer becomes increasingly blurred. What once required specialized frontend engineers and 3D artists can now be explored by individual creators with strong ideas and creative vision.",
+    },
+
+    {
+      type: "paragraph",
+      text: "Google AI Studio represents a major step toward democratizing interactive design. The future of web experiences is no longer limited by technical complexity — it is driven by imagination, iteration, and the ability to communicate ideas effectively through AI.",
+    },
+  ],
+  } 
 ];
