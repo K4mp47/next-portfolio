@@ -1,6 +1,7 @@
 "use client";
-import { BugPlay, Flag, Shield } from "lucide-react";
-import React, { useEffect, useRef, useState } from "react";
+import { BugPlay, Flag } from "lucide-react";
+import React from "react";
+import { Timeline, type TimelineEntry } from "./Timeline";
 import {
   Cell,
   Legend,
@@ -66,6 +67,25 @@ const EXPERIENCE = [
     description: "High school diploma in IT specialization.",
   },
 ];
+
+const TIMELINE_DATA: TimelineEntry[] = EXPERIENCE.map((job) => ({
+  title: job.period,
+  content: (
+    <div className="border-t border-palantir-gray pt-5 transition-colors duration-300 group-hover:border-gray-700">
+      <div className="mb-3 flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6">
+        <h4 className="text-lg font-light text-gray-200 transition-colors group-hover:text-blue-200">
+          {job.role}
+        </h4>
+        <span className="shrink-0 font-mono text-[10px] uppercase tracking-[0.16em] text-gray-500">
+          {job.company}
+        </span>
+      </div>
+      <p className="max-w-3xl text-sm leading-relaxed text-gray-500">
+        {job.description}
+      </p>
+    </div>
+  ),
+}));
 
 export const SkillMatrix: React.FC = () => {
   return (
@@ -213,31 +233,7 @@ export const SkillMatrix: React.FC = () => {
             </p>
           </div>
 
-          <div className="border-t border-palantir-gray">
-            {EXPERIENCE.map((job, index) => (
-              <div
-                key={index}
-                className="grid grid-cols-1 md:grid-cols-12 gap-6 py-8 border-b border-palantir-gray group hover:bg-white/5 transition-colors px-4 md:px-0"
-              >
-                <div className="md:col-span-3 md:ml-2">
-                  <div className="font-mono text-xs text-blue-400 mb-1 tracking-widest uppercase">
-                    {job.period}
-                  </div>
-                  <div className="font-sans font-medium text-white">
-                    {job.company}
-                  </div>
-                </div>
-                <div className="md:col-span-9">
-                  <h4 className="text-lg font-light text-gray-200 mb-2 group-hover:text-blue-200 transition-colors">
-                    {job.role}
-                  </h4>
-                  <p className="text-sm text-gray-500 leading-relaxed max-w-3xl">
-                    {job.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <Timeline data={TIMELINE_DATA} />
         </div>
       </div>
     </div>

@@ -123,6 +123,22 @@ export const PROJECTS: Project[] = [
     ],
     imageUrl: "https://picsum.photos/800/610",
     link: "https://author-gallery.netlify.app/",
-  }
+  },
+  {
+    id: "11",
+    title: "Nexa E-Commerce",
+    category: "Full-Stack E-Commerce",
+    description:
+      "A responsive e-commerce storefront with product discovery, authentication, cart, checkout, reviews, and a Supabase-backed catalog.",
+    techStack: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Supabase",
+      "Base UI",
+    ],
+    metrics: [{ label: "Status", value: "In Progress" }],
+    imageUrl: "https://picsum.photos/seed/nexa-commerce/800/600",
+    link: "https://github.com/K4mp47/e_commerce",
+  },
 ];
-
