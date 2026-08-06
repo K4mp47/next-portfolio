@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { CheckCircle, Loader2, Send } from "lucide-react";
 import { useForm } from "@formspree/react";
 
@@ -9,17 +9,12 @@ export const ContactForm: React.FC = () => {
     email: "",
     message: "",
   });
-  const [status, setStatus] = useState<"idle" | "loading" | "success">("idle");
   const [state, handleSubmit] = useForm("mdkqpknq");
-
-  useEffect(() => {
-    if (state.submitting) {
-      setStatus("loading");
-    }
-    if (state.succeeded) {
-      setStatus("success");
-    }
-  }, [state.succeeded, state.submitting]);
+  const status = state.succeeded
+    ? "success"
+    : state.submitting
+      ? "loading"
+      : "idle";
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,

@@ -1,14 +1,73 @@
 import React from "react";
+import type { Metadata } from "next";
 import { Hero } from "@/components/Hero";
 import { ProjectCard } from "@/components/ProjectCard";
 import { SkillMatrix } from "@/components/SkillMatrix";
 import { Terminal } from "@/components/Terminal";
 import { ContactForm } from "@/components/ContactForm";
 import { PROJECTS } from "@/constants/constant";
-import { Download } from "lucide-react";
 import { NavBar } from "@/components/NavBar";
 import Image from "next/image";
-import Head from "next/head";
+import {
+  absoluteUrl,
+  authorName,
+  sameAsLinks,
+  siteName,
+  siteUrl,
+  socialImage,
+} from "@/lib/seo";
+
+const homeDescription =
+  "Alberto Campagnolo is a web and software developer in Treviso, available remotely for React, Next.js, TypeScript, and AI-integrated web applications.";
+
+export const metadata: Metadata = {
+  title: "Web & Software Developer",
+  description: homeDescription,
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: `${authorName} - Web & Software Developer`,
+    description: homeDescription,
+    url: siteUrl,
+    siteName,
+    images: [
+      {
+        url: absoluteUrl(socialImage),
+        alt: `${authorName} portfolio logo`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: `${authorName} - Web & Software Developer`,
+    description: homeDescription,
+    images: [absoluteUrl(socialImage)],
+  },
+};
+
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: authorName,
+  url: siteUrl,
+  image: absoluteUrl(socialImage),
+  jobTitle: "Web and Software Developer",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Treviso",
+    addressCountry: "IT",
+  },
+  sameAs: sameAsLinks,
+  knowsAbout: [
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Node.js",
+    "AI integrations",
+    "Frontend architecture",
+  ],
+};
 
 function App() {
   return (
@@ -16,6 +75,10 @@ function App() {
       className="bg-black min-h-screen text-white"
       suppressHydrationWarning={true}
     >
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+      />
       <NavBar />
       <main className="bg-black min-h-screen text-slate-200 selection:bg-white selection:text-black">
         <Hero />

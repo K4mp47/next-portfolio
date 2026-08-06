@@ -1,4 +1,5 @@
 import React from "react";
+import type { Metadata } from "next";
 import { BLOG_POSTS } from "@/constants/blog";
 import { NavBar } from "@/components/NavBar";
 import { notFound } from "next/navigation";
@@ -6,9 +7,71 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
+import {
+  absoluteUrl,
+  authorName,
+  siteName,
+  siteUrl,
+  socialImage,
+} from "@/lib/seo";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
+}
+
+export function generateStaticParams() {
+  return BLOG_POSTS.map((post) => ({
+    slug: post.slug,
+  }));
+}
+
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const post = BLOG_POSTS.find((p) => p.slug === slug);
+
+  if (!post) {
+    return {
+      title: "Article Not Found",
+      robots: {
+        index: false,
+        follow: false,
+      },
+    };
+  }
+
+  const postUrl = `/blog/${post.slug}`;
+  const imageUrl = absoluteUrl(post.coverImage || socialImage);
+
+  return {
+    title: post.title,
+    description: post.excerpt,
+    alternates: {
+      canonical: postUrl,
+    },
+    openGraph: {
+      type: "article",
+      title: post.title,
+      description: post.excerpt,
+      url: postUrl,
+      siteName,
+      publishedTime: new Date(post.date).toISOString(),
+      authors: [authorName],
+      images: [
+        {
+          url: imageUrl,
+          alt: post.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      images: [imageUrl],
+    },
+  };
 }
 
 export default async function BlogPostPage({ params }: PageProps) {
@@ -19,8 +82,37 @@ export default async function BlogPostPage({ params }: PageProps) {
     notFound();
   }
 
+  const postUrl = absoluteUrl(`/blog/${post.slug}`);
+  const imageUrl = absoluteUrl(post.coverImage || socialImage);
+  const publishedDate = new Date(post.date).toISOString();
+  const blogPostingJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.excerpt,
+    image: imageUrl,
+    datePublished: publishedDate,
+    dateModified: publishedDate,
+    mainEntityOfPage: postUrl,
+    url: postUrl,
+    author: {
+      "@type": "Person",
+      name: authorName,
+      url: siteUrl,
+    },
+    publisher: {
+      "@type": "Person",
+      name: authorName,
+      url: siteUrl,
+    },
+  };
+
   return (
     <div className="bg-black min-h-screen text-white selection:bg-white selection:text-black">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingJsonLd) }}
+      />
       <NavBar />
       
       <main className="pt-40 pb-24 px-6">

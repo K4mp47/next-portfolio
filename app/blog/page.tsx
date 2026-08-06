@@ -1,10 +1,41 @@
 import React from "react";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { BLOG_POSTS } from "@/constants/blog";
 import { BlogCard } from "@/components/BlogCard";
 import { NavBar } from "@/components/NavBar";
+import { absoluteUrl, authorName, siteName, socialImage } from "@/lib/seo";
 
 const POSTS_PER_PAGE = 3;
+
+const blogDescription =
+  "Articles by Alberto Campagnolo on web development, software engineering, design, code, and AI-assisted digital experiences.";
+
+export const metadata: Metadata = {
+  title: "Journal",
+  description: blogDescription,
+  alternates: {
+    canonical: "/blog",
+  },
+  openGraph: {
+    title: `Journal - ${siteName}`,
+    description: blogDescription,
+    url: "/blog",
+    siteName,
+    images: [
+      {
+        url: absoluteUrl(socialImage),
+        alt: `${authorName} portfolio logo`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: `Journal - ${authorName}`,
+    description: blogDescription,
+    images: [absoluteUrl(socialImage)],
+  },
+};
 
 export default async function BlogListing({
   searchParams,
