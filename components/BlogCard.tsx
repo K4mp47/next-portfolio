@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { BlogPost } from "@/types";
 import { ArrowRight } from "lucide-react";
+import { DitherShader } from "@/components/DitherShader";
 
 interface BlogCardProps {
   post: BlogPost;
@@ -34,11 +35,16 @@ export const BlogCard: React.FC<BlogCardProps> = ({ post }) => {
           </div>
         </div>
         {post.coverImage && (
-          <div className="w-full md:w-48 h-32 relative overflow-hidden rounded-sm grayscale group-hover:grayscale-0 transition-all duration-500">
-            <img
+          <div className="w-full md:w-48 h-32 relative overflow-hidden rounded-sm">
+            <DitherShader
               src={post.coverImage}
               alt={post.title}
-              className="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-500"
+              gridSize={3}
+              colorMode="duotone"
+              primaryColor="#050505"
+              secondaryColor="#dbeafe"
+              threshold={0.48}
+              className="h-full w-full"
             />
           </div>
         )}

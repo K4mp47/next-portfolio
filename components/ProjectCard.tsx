@@ -1,7 +1,7 @@
 import React from "react";
 import { Project } from "@/types";
 import { ArrowUpRight } from "lucide-react";
-import Image from "next/image";
+import { DitherShader } from "@/components/DitherShader";
 
 interface ProjectCardProps {
   project: Project;
@@ -16,12 +16,15 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       {/* Image / Preview Area (Abstract) */}
       <div className="h-48 w-full bg-palantir-gray/20 relative overflow-hidden">
         {project.imageUrl ? (
-          <Image
-            width={800}
-            height={600}
+          <DitherShader
             src={project.imageUrl}
             alt={project.title}
-            className="w-full h-full object-cover filter grayscale contrast-125 opacity-60 group-hover:opacity-80 transition-opacity"
+            gridSize={3}
+            colorMode="duotone"
+            primaryColor="#050505"
+            secondaryColor="#dbeafe"
+            threshold={0.48}
+            className="h-full w-full"
           />
         ) : (
           <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-palantir-gray to-black">
