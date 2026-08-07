@@ -38,6 +38,11 @@ export const NavBar: React.FC = () => {
       { name: "Expertise", href: "/#skills", id: "skills" },
       { name: "Terminal", href: "/#terminal", id: "terminal" },
       { name: "Journal", href: "/blog", id: "blog" },
+      {
+        name: "Dev Blog",
+        href: "https://k4mp47-dev-blog-animation.netlify.app/",
+        id: "dev-blog",
+      },
     ],
     [],
   );
@@ -79,7 +84,7 @@ export const NavBar: React.FC = () => {
   return (
     <>
       <div className="fixed top-6 left-0 right-0 z-100 flex justify-center px-4 pointer-events-none">
-        <nav className="pointer-events-auto relative flex items-center gap-6 px-3 pl-4 py-2.5 rounded-md border border-white/10 bg-palantir-black/60 backdrop-blur-md shadow-2xl shadow-black/50 w-full max-w-3xl transition-all duration-300">
+        <nav className="pointer-events-auto relative flex items-center gap-6 px-3 pl-4 py-2.5 rounded-md border border-white/10 bg-palantir-black/60 backdrop-blur-md shadow-2xl shadow-black/50 w-full max-w-4xl transition-all duration-300">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 mr-auto">
             <div className="w-6 h-6 bg-black text-black flex items-center justify-center font-bold font-mono text-xs rounded-sm overflow-hidden">
@@ -97,18 +102,20 @@ export const NavBar: React.FC = () => {
           </Link>
 
           {/* Desktop Links */}
-          <div className="hidden md:flex items-center gap-2">
+          <div className="hidden lg:flex items-center gap-2">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
+                target={link.href.startsWith("http") ? "_blank" : undefined}
+                rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
                 onClick={(e) => {
                   if (link.href.startsWith("/#")) {
                     e.preventDefault();
                     scrollToId(link.id);
                   }
                 }}
-                className={`text-[11px] font-mono uppercase tracking-widest px-3 py-1 rounded-md transition-all duration-300 ${
+                className={`whitespace-nowrap text-[11px] font-mono uppercase tracking-widest px-3 py-1 rounded-md transition-all duration-300 ${
                   (link.href.startsWith("/#") && activeSection === link.id) || (pathname === "/blog" && link.id === "blog")
                     ? "text-white bg-white/10 shadow-[0_0_10px_rgba(255,255,255,0.1)]"
                     : "text-gray-400 hover:text-white hover:bg-white/5"
@@ -121,7 +128,7 @@ export const NavBar: React.FC = () => {
 
           {/* CTA & Mobile Toggle */}
           <div className="flex items-center gap-3">
-            <div className="hidden md:block w-px h-4 bg-white/10"></div>
+            <div className="hidden lg:block w-px h-4 bg-white/10"></div>
             <Link
               href="/#contact"
               onClick={(e) => {
@@ -130,14 +137,14 @@ export const NavBar: React.FC = () => {
                   scrollToId("contact");
                 }
               }}
-              className="hidden md:flex items-center gap-2 px-4 py-1.5 bg-white text-black text-[10px] font-mono uppercase tracking-widest hover:bg-gray-200 rounded-md transition-all"
+              className="hidden lg:flex items-center gap-2 px-4 py-1.5 bg-white text-black text-[10px] font-mono uppercase tracking-widest hover:bg-gray-200 rounded-md transition-all"
             >
               Contact
               <ArrowUpRight size={12} />
             </Link>
 
             <button
-              className="md:hidden text-gray-300 hover:text-white p-1"
+              className="lg:hidden text-gray-300 hover:text-white p-1"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? <X size={18} /> : <Menu size={18} />}
@@ -148,12 +155,14 @@ export const NavBar: React.FC = () => {
 
       {/* Mobile Menu Dropdown */}
       {isMenuOpen && (
-        <div className="fixed top-24 left-4 right-4 z-90 md:hidden flex flex-col items-center">
+        <div className="fixed top-24 left-4 right-4 z-90 lg:hidden flex flex-col items-center">
           <div className="w-full max-w-3xl bg-palantir-black/95 backdrop-blur-xl border border-white/10 rounded-md p-4 shadow-2xl flex flex-col gap-2">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
+                target={link.href.startsWith("http") ? "_blank" : undefined}
+                rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
                 onClick={(e) => {
                   if (link.href.startsWith("/#")) {
                     e.preventDefault();
