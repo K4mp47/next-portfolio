@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Hero } from "@/components/Hero";
 import { ProjectCard } from "@/components/ProjectCard";
 import { SkillMatrix } from "@/components/SkillMatrix";
-import { Terminal } from "@/components/Terminal";
+import { PortfolioChat } from "@/components/PortfolioChat";
 import { ContactForm } from "@/components/ContactForm";
 import { PROJECTS } from "@/constants/constant";
 import { NavBar } from "@/components/NavBar";
@@ -113,34 +113,6 @@ function App() {
 
         <SkillMatrix />
 
-        {/* Intelligence Section (Gemini) */}
-        <section
-          id="terminal"
-          className="bg-linear-to-b from-palantir-black to-palantir-dark py-24 px-6 scroll-mt-32"
-        >
-          {/* <div className="max-w-4xl mx-auto text-center mb-12"> */}
-          {/*   <h2 className="text-3xl font-sans font-light text-white mb-4"> */}
-          {/*     Interactive Terminal */}
-          {/*   </h2> */}
-          {/*   <p className="text-gray-400"> */}
-          {/*     Query the AI assistant about my technical experience, work */}
-          {/*     history, and availability. */}
-          {/*   </p> */}
-          {/* </div> */}
-          <div className="max-w-7xl mx-auto xl:px-6">
-            <div className="mb-12 border-l-2 border-white pl-6">
-              <h2 className="text-3xl font-sans font-light tracking-tight text-white mb-2">
-                Interactive Terminal
-              </h2>
-              <p className="text-gray-400 text-sm max-w-lg">
-                Query the AI assistant about my technical experience, work
-                history, and availability.
-              </p>
-            </div>
-          </div>
-          <Terminal />
-        </section>
-
         {/* Footer & Contact */}
         <footer
           id="contact"
@@ -237,6 +209,7 @@ function App() {
           </div>
         </footer>
       </main>
+      <PortfolioChat />
     </div>
   );
 }

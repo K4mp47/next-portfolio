@@ -21,8 +21,6 @@ export const Hero: React.FC = () => {
   const heroRef = useRef<HTMLDivElement>(null);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
-  const HEADER_OFFSET = 80;
-
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -54,19 +52,6 @@ export const Hero: React.FC = () => {
       window.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
-
-  const scrollToId = (id: string) => {
-    const el = document.getElementById(id);
-    if (!el) return;
-    const y = el.getBoundingClientRect().top + globalThis.scrollY -
-      HEADER_OFFSET;
-    try {
-      globalThis.history.pushState(null, "", `#${id}`);
-    } catch (err) {
-      // ignore: some environments or older browsers may throw
-    }
-    globalThis.scrollTo({ top: y, behavior: "smooth" });
-  };
 
   // Card Content Data
   const row1 = [
@@ -200,19 +185,6 @@ export const Hero: React.FC = () => {
             Crafting digital experiences with React, Node.js, and modern web
             applications. Focused on accessibility, and clean code.
           </p>
-
-          <div
-            className={`mt-6 ${isVisible ? "animate-fade-in-up" : "opacity-0"}`}
-            style={{ animationDelay: "700ms", animationFillMode: "both" }}
-          >
-            <button
-              className="text-xs font-mono text-gray-500 hover:text-blue-400 flex items-center gap-2 transition-colors cursor-pointer"
-              onClick={() => scrollToId("terminal")}
-            >
-              <Terminal size={12} />
-              <span>Initialize AI Assistant</span>
-            </button>
-          </div>
         </div>
 
         {/* Decorative Stats Column */}

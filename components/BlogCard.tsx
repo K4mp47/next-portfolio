@@ -3,6 +3,7 @@ import Link from "next/link";
 import { BlogPost } from "@/types";
 import { ArrowRight } from "lucide-react";
 import { DitherShader } from "@/components/DitherShader";
+import IconWave from "@/components/IconWave";
 
 interface BlogCardProps {
   post: BlogPost;
@@ -36,7 +37,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({ post }) => {
         </div>
         {post.coverImage && (
           <div className="w-full md:w-48 h-32 relative overflow-hidden rounded-sm">
-            <DitherShader
+            {post.coverAnimation === "icon-wave" ? <IconWave compact /> : <DitherShader
               src={post.coverImage}
               alt={post.title}
               gridSize={3}
@@ -45,7 +46,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({ post }) => {
               secondaryColor="#dbeafe"
               threshold={0.48}
               className="h-full w-full"
-            />
+            />}
           </div>
         )}
       </div>

@@ -1,0 +1,80 @@
+.icon-wave {
+  --wave-fill: #fafafd;
+  --wave-border: #e7e7ea;
+  --wave-ink: #26262b;
+  --wave-inset: #ffffffe6;
+  display: block;
+  width: 100%;
+  padding: 96px 0;
+  background: #fff;
+}
+.dark .icon-wave {
+  --wave-fill: #18181b;
+  --wave-border: #303036;
+  --wave-ink: #e4e4e7;
+  --wave-inset: #ffffff14;
+  background: #0a0a0a;
+}
+.icon-wave__stage {
+  width: 100%;
+  height: calc(100px + var(--wave-amplitude) * 2);
+  overflow: hidden;
+  contain: layout paint style;
+}
+.icon-wave__track {
+  --scroll-x: 0px;
+  position: relative;
+  display: flex;
+  gap: 14px;
+  width: max-content;
+  height: 100%;
+  margin-left: 50%;
+  transform: translate3d(calc(-50% + var(--scroll-x)), 0, 0);
+}
+.icon-wave__dot {
+  box-sizing: border-box;
+  position: relative;
+  display: grid;
+  flex: 0 0 90px;
+  width: 90px;
+  height: 90px;
+  margin-top: calc(var(--wave-amplitude) + 5px);
+  place-items: center;
+  color: var(--wave-ink);
+  background: var(--wave-fill);
+  border: 1px solid var(--wave-border);
+  border-radius: 50%;
+  box-shadow: 0 1px 1px #0a0a1405, inset 0 1px 0 var(--wave-inset);
+  animation: icon-wave-bob var(--wave-duration) linear infinite paused;
+  pointer-events: none;
+}
+.icon-wave.is-visible:not([data-paused="true"]) .icon-wave__dot {
+  animation-play-state: running;
+}
+.icon-wave.is-visible:not([data-paused="true"]) .icon-wave__track,
+.icon-wave.is-visible:not([data-paused="true"]) .icon-wave__dot {
+  will-change: transform;
+}
+.icon-wave__dot svg { width: 27px; height: 27px; }
+@keyframes icon-wave-bob {
+  0%, 50%, 100% { transform: translate3d(0, 0, 0); }
+  12.5%, 37.5% { transform: translate3d(0, calc(var(--wave-amplitude) * .707), 0); }
+  25% { transform: translate3d(0, var(--wave-amplitude), 0); }
+  62.5%, 87.5% { transform: translate3d(0, calc(var(--wave-amplitude) * -.707), 0); }
+  75% { transform: translate3d(0, calc(var(--wave-amplitude) * -1), 0); }
+}
+@media (max-width: 700px) { .icon-wave { padding: 64px 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .icon-wave .icon-wave__dot { animation: none; will-change: auto; }
+  .icon-wave .icon-wave__track { transform: translate3d(-50%, 0, 0); will-change: auto; }
+}
+
+.icon-wave { padding: 24px 0; background: #0a0a0a; --wave-fill: #18181b; --wave-border: #303036; --wave-ink: #e4e4e7; --wave-inset: #ffffff14; }
+.icon-wave--compact { padding: 0; }
+.icon-wave--compact .icon-wave__stage { height: 128px; }
+.icon-wave--compact .icon-wave__track { align-items: center; gap: 8px; }
+.icon-wave--compact .icon-wave__dot { flex-basis: 40px; width: 40px; height: 40px; margin-top: 0; }
+.icon-wave--compact .icon-wave__dot svg { width: 18px; height: 18px; }
+@media (prefers-reduced-motion: no-preference) {
+  .group:is(:hover, :focus-visible) .icon-wave--compact.is-visible .icon-wave__dot { animation-play-state: running; }
+}

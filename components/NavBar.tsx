@@ -36,7 +36,6 @@ export const NavBar: React.FC = () => {
     () => [
       { name: "Projects", href: "/#projects", id: "projects" },
       { name: "Expertise", href: "/#skills", id: "skills" },
-      { name: "Terminal", href: "/#terminal", id: "terminal" },
       { name: "Journal", href: "/blog", id: "blog" },
       {
         name: "Dev Blog",
@@ -83,7 +82,7 @@ export const NavBar: React.FC = () => {
 
   return (
     <>
-      <div className="fixed top-6 left-0 right-0 z-100 flex justify-center px-4 pointer-events-none">
+      <div className="fixed top-6 left-0 right-0 z-30 flex justify-center px-4 pointer-events-none">
         <nav className="pointer-events-auto relative flex items-center gap-6 px-3 pl-4 py-2.5 rounded-md border border-white/10 bg-palantir-black/60 backdrop-blur-md shadow-2xl shadow-black/50 w-full max-w-4xl transition-all duration-300">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 mr-auto">
@@ -155,7 +154,7 @@ export const NavBar: React.FC = () => {
 
       {/* Mobile Menu Dropdown */}
       {isMenuOpen && (
-        <div className="fixed top-24 left-4 right-4 z-90 lg:hidden flex flex-col items-center">
+        <div className="fixed top-24 left-4 right-4 z-30 lg:hidden flex flex-col items-center">
           <div className="w-full max-w-3xl bg-palantir-black/95 backdrop-blur-xl border border-white/10 rounded-md p-4 shadow-2xl flex flex-col gap-2">
             {navLinks.map((link) => (
               <Link

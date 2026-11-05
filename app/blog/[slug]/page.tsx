@@ -2,6 +2,7 @@ import React from "react";
 import type { Metadata } from "next";
 import { BLOG_POSTS } from "@/constants/blog";
 import { NavBar } from "@/components/NavBar";
+import IconWave from "@/components/IconWave";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
@@ -139,7 +140,7 @@ export default async function BlogPostPage({ params }: PageProps) {
               {post.title}
             </h1>
             
-            {post.coverImage && (
+            {post.coverAnimation === "icon-wave" ? <IconWave /> : post.coverImage && (
               <div className="aspect-video w-full overflow-hidden rounded-sm grayscale hover:grayscale-0 transition-all duration-700">
                 <img 
                   src={post.coverImage} 

@@ -11,6 +11,7 @@ export type BlogPost = {
   date: string;
   readTime: string;
   coverImage: string;
+  coverAnimation?: "icon-wave";
   content: ContentBlock[];
 };
 

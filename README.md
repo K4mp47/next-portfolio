@@ -4,6 +4,10 @@ You can view the live version of the portfolio [here](https://k4mp47.netlify.app
 
 ## Getting Started
 
+For the portfolio assistant, set `OPENROUTER_API_KEY` in `.env.local` and in the
+Netlify environment variables. Keep this key server-only; do not use a
+`NEXT_PUBLIC_` prefix. The assistant uses OpenRouter's `openrouter/free` model.
+
 First, run the development server:
 
 ```bash
