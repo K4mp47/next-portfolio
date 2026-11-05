@@ -123,8 +123,13 @@ function App() {
 
           <div className="max-w-7xl mx-auto px-6 relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
+              {/* Right Column: Contact Form */}
+              <div className="lg:order-2 lg:pl-12 lg:border-l border-gray-900">
+                <ContactForm />
+              </div>
+
               {/* Left Column: Info & Links */}
-              <div className="flex flex-col h-full">
+              <div className="flex flex-col h-full lg:order-1">
                 {/* Brand & Bio */}
                 <div className="mb-12">
                   <div className="w-8 h-8 bg-black text-black flex items-center justify-center font-bold font-mono mb-6 rounded-sm overflow-hidden">
@@ -201,10 +206,6 @@ function App() {
                 </div>
               </div>
 
-              {/* Right Column: Contact Form */}
-              <div className="lg:pl-12 lg:border-l border-gray-900">
-                <ContactForm />
-              </div>
             </div>
           </div>
         </footer>

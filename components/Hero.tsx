@@ -103,7 +103,11 @@ export const Hero: React.FC = () => {
       className="relative min-h-screen flex items-center justify-start overflow-hidden pt-16"
     >
       {/* 3D Animated Background */}
-      <div className="absolute inset-0 z-0 bg-black flex items-center justify-center overflow-hidden">
+      <div
+        inert
+        aria-hidden="true"
+        className="absolute inset-0 z-0 bg-black flex items-center justify-center overflow-hidden pointer-events-none select-none"
+      >
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,#0f172a_0%,#000000_100%)] z-0">
         </div>
 
