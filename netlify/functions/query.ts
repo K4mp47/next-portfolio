@@ -411,7 +411,7 @@ export const queryIntelligence = async (
           { role: "user", content: userPrompt.trim() },
         ],
         temperature: 0.7,
-        maxTokens: 200,
+        maxTokens: 1000,
         stream: true,
       },
     });
